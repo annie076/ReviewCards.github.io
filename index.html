@@ -1,1 +1,146 @@
 <!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        div {
+            flex-wrap: wrap;
+            height: 250px;
+            width: 200px;
+            display: inline-block;
+        }
+
+
+        .Card {
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .Hidden {
+            visibility: hidden;
+            position: absolute;
+            pointer-events: auto;
+            transition-duration: 500ms;
+        }
+
+        .Visible {
+            visibility: visible;
+            position: absolute;
+            pointer-events: auto;
+            background-color: #ffbde2;
+        }
+
+        div.Card:hover .Hidden {
+            visibility: visible;
+            background-color: #bde4ff;
+            transition-duration: 500ms;
+        }
+
+        div.Card:hover .Visible {
+            visibility: hidden;
+        }
+
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>Review Cards Assignment</header>
+    <hr>
+    <div class="Containers">
+        <div class="Card" id="Red">
+            <div class="Hidden"><br><br>
+                <center>Because :hover only works on the top element!</center>
+            </div>
+            <div class="Visible">
+                <center>Why did this take so long?</center>
+            </div>
+        </div>
+    </div>
+
+    <div class="Containers">
+        <div class="Card" id="Blue">
+            <div class="Hidden"><br><br>
+                <center>The world may never know.</center>
+            </div>
+            <div class="Visible">
+                <center>Why am I making up questions?</center>
+            </div>
+        </div>
+    </div>
+
+    <div class="Containers">
+        <div class="Card" id="Green">
+            <div class="Hidden"><br><br>
+                <center>If only I knew...</center>
+            </div>
+            <div class="Visible">
+                <center>Why is the outro animation so bad?</center>
+            </div>
+        </div>
+    </div>
+
+    <div class="Containers">
+        <div class="Card" id="LightBlue">
+            <div class="Hidden"><br><br>
+                <center>Because theyre really good at it.</center>
+            </div>
+            <div class="Visible">
+                <center>You know why you never see elephants hiding up in trees?
+                </center>
+            </div>
+        </div>
+    </div>
+
+    <div class="Containers">
+        <div class="Card" id="Gray">
+            <div class="Hidden"><br><br>
+                <center>The dont meet the koalafications.</center>
+            </div>
+            <div class="Visible">
+                <center>Why arent koalas actual bears?</center>
+            </div>
+        </div>
+    </div>
+
+    <div class="Containers">
+        <div class="Card" id="BlueViolet">
+            <div class="Hidden"><br><br>
+                <center>B</center>
+            </div>
+            <div class="Visible">
+                <center>What do you call bears with no ears?</center>
+            </div>
+        </div>
+    </div>
+
+    <div class="Containers">
+        <div class="Card" id="DarkCyan">
+            <div class="Hidden"><br><br>
+                <center>They planet.</center>
+            </div>
+            <div class="Visible">
+                <center>How does NASA organize a party?</center>
+            </div>
+        </div>
+    </div>
+
+    <div class="Containers">
+        <div class="Card" id="Coral">
+            <div class="Hidden"><br><br>
+                <center>10-tickles.</center>
+            </div>
+            <div class="Visible">
+                <center>How many tickles does it take to make an octopus laugh?</center>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
